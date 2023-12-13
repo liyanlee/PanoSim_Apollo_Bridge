@@ -1,0 +1,7 @@
+Name,DisplayName,Type,Default,Group,Tips
+LidarName,Lidar Name,string,SurroundLidarPointCloudSensor.0,,
+Frequency,Scan Frequency (Hz),int,10,,
+MaxCount,Max Count,int,11520,,
+RemoteIP,Remote IP,string,127.0.0.1,,
+Port,Port,int,14322,,
+Compression,Compression,True/False,True,,

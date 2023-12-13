@@ -1,0 +1,16 @@
+Name,DisplayName,Type,Default,Group,SubGroup,Switch,Include,Exclude
+PanoSimNetwork,PanoSim Network,Group,,,,,,
+ApolloNetwork,Apollo Network,Group,,,,,,
+groupObstacle,groupObstacle,Group,TRUE,,,TRUE,,groupObstacle/groupSensor
+groupSensor,groupSensor,Group,,,,TRUE,,groupObstacle/groupSensor
+ForSwitch,For Switch,Group,,,,TRUE,,
+LocalIP,PanoSim IP,string,192.168.2.33,PanoSimNetwork,,,,
+TrajectoryPort,Trajectory Port,int,12365,PanoSimNetwork,,,,
+ApolloIP,Apollo IP,string,192.168.2.23,ApolloNetwork,,,,
+LocalizationPort,Localization Port,int,12361,ApolloNetwork,,,,
+ChassisPort,Chassis Port,int,12362,ApolloNetwork,,,,
+TrafficLightPort,TrafficLight Port,int,12366,ApolloNetwork,,,,
+subObstacle,subObstacle,Group,,,,TRUE,,
+ObstaclesPort,Receive Obstacle,int,12363,ApolloNetwork,subObstacle,,,
+subRoute,subRoute,Group,,,,TRUE,,
+RoutePort,Receive Route,int,12364,ApolloNetwork,subRoute,,,

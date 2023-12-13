@@ -1,0 +1,7 @@
+Name,DisplayName,Type,Default,Group,Tips
+CameraName,Camera Name,string,MonoCameraSensor.0,,
+ResolutionWidth,Resolution Width,int,1280,,
+ResolutionHeight,Resolution Height,int,720,,
+RemoteIP,Remote IP,string,127.0.0.1,,
+Port,Port,int,14321,,
+Compression,Compression,True/False,True,,
