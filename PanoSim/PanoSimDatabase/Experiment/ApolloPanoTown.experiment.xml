@@ -1,0 +1,31 @@
+<Experiment readonly="false" description="" groupId="0" mode="normal">
+  <World link="PanoTown" traffic="true" hostId="0" nodeId="0" />
+  <Vehicle link="C_Class_Sedan_ZJU" hostId="0" nodeId="0" type="PanoSim-Raw" />
+  <Task>
+    <Trajectory Z="0">
+      <KeyPoints>
+        <KeyPoint X="28" Y="1.75" type="Road" Lane="1000_1" />
+      </KeyPoints>
+      <WayPoints>
+        <WayPoint X="28" Y="1.75" />
+        <WayPoint X="-72" Y="1.74" />
+      </WayPoints>
+      <Edges />
+    </Trajectory>
+    <SpeedTable>
+      <SpeedTime Time="0" Speed="0" />
+    </SpeedTable>
+    <ParkingSpot enable="False" Number="0" />
+  </Task>
+  <TrafficObjects />
+  <Disturbance />
+  <Agent>
+    <Plugin internal="false" hostId="0" nodeId="0" link="xControl.dll" Parameters="" Parameter="True" />
+    <Plugin internal="false" hostId="0" nodeId="1" link="ApolloBridge.py" LocalIP="192.168.2.33" TrajectoryPort="12365" ApolloIP="192.168.2.23" LocalizationPort="12361" ChassisPort="12362" TrafficLightPort="12366" ObstaclesPort="12363" RoutePort="12364" PanoSimNetwork="True" ApolloNetwork="True" subObstacle="False" subRoute="False" />
+    <Plugin internal="false" hostId="0" nodeId="2" link="CameraTcpOutput.py" CameraName="MonoCameraSensor.0" ResolutionWidth="1920" ResolutionHeight="1080" RemoteIP="192.168.2.23" Port="14321" Compression="True" Parameter="True" />
+    <Plugin internal="false" hostId="0" nodeId="3" link="LidarTcpOutput.py" LidarName="SurroundLidarPointCloudSensor.0" Frequency="10" MaxCount="46080" RemoteIP="192.168.2.23" Port="14322" Compression="True" Parameter="True" />
+  </Agent>
+  <Evaluator />
+  <Simulation Solver="ode1" Step="0.001" StopTime="0" Speed="1" UtcTime="0" MultiAgentMode="None" ServerIP="127.0.0.1" ServerPort="1018" />
+  <GlobalVariables Variable0="0" Variable1="0" Variable2="0" Variable3="0" Variable4="0" Variable5="0" Variable6="0" Variable7="0" Variable8="0" Variable9="0" />
+</Experiment>
