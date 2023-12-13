@@ -1,0 +1,300 @@
+Signal {
+    id {
+        id: "1"
+    }
+    boundary {
+        point {
+            x: -16.4
+            y: 8.2
+            z: 0
+        }
+        point {
+            x: -16.4
+            y: 13.2
+            z: 0
+        }
+        point {
+            x: -16.4
+            y: 13.2
+            z: 0
+        }
+        point {
+            x: -16.4
+            y: 8.2
+            z: 0
+        }
+    }
+    subsignal {
+        id {
+            id: "0"
+        }
+        type: CIRCLE
+        location {
+            x: -16.4
+            y: 9.2
+            z: 0
+        }
+    }
+    subsignal {
+        id {
+            id: "1"
+        }
+        type: CIRCLE
+        location {
+            x: -16.4
+            y: 10.2
+            z: 0
+        }
+    }
+    subsignal {
+        id {
+            id: "2"
+        }
+        type: CIRCLE
+        location {
+            x: -16.4
+            y: 11.2
+            z: 0
+        }
+    }
+    stop_line {
+        segment {
+            line_segment {
+                point {
+                    x: 14.1
+                    y: 7.2
+                }
+                point {
+                    x: 14.1
+                    y: -7
+                }
+            }
+        }
+    }
+    type: MIX_3_VERTICAL
+}
+Signal {
+    id {
+        id: "2"
+    }
+    boundary {
+        point {
+            x: 8.4
+            y: 16.5
+            z: 0
+        }
+        point {
+            x: 8.4
+            y: 21.5
+            z: 0
+        }
+        point {
+            x: 8.4
+            y: 21.5
+            z: 0
+        }
+        point {
+            x: 8.4
+            y: 16.5
+            z: 0
+        }
+    }
+    subsignal {
+        id {
+            id: "0"
+        }
+        type: CIRCLE
+        location {
+            x: 8.4
+            y: 17.5
+            z: 0
+        }
+    }
+    subsignal {
+        id {
+            id: "1"
+        }
+        type: CIRCLE
+        location {
+            x: 8.4
+            y: 18.5
+            z: 0
+        }
+    }
+    subsignal {
+        id {
+            id: "2"
+        }
+        type: CIRCLE
+        location {
+            x: 8.4
+            y: 19.5
+            z: 0
+        }
+    }
+    stop_line {
+        segment {
+            line_segment {
+                point {
+                    x: -7.25
+                    y: -14.1
+                }
+                point {
+                    x: 6.9
+                    y: -14.1
+                }
+            }
+        }
+    }
+    type: MIX_3_VERTICAL
+}
+Signal {
+    id {
+        id: "3"
+    }
+    boundary {
+        point {
+            x: 16.3
+            y: -8.3
+            z: 0
+        }
+        point {
+            x: 16.3
+            y: -3.3
+            z: 0
+        }
+        point {
+            x: 16.3
+            y: -3.3
+            z: 0
+        }
+        point {
+            x: 16.3
+            y: -8.3
+            z: 0
+        }
+    }
+    subsignal {
+        id {
+            id: "0"
+        }
+        type: CIRCLE
+        location {
+            x: 16.3
+            y: -7.3
+            z: 0
+        }
+    }
+    subsignal {
+        id {
+            id: "1"
+        }
+        type: CIRCLE
+        location {
+            x: 16.3
+            y: -6.3
+            z: 0
+        }
+    }
+    subsignal {
+        id {
+            id: "2"
+        }
+        type: CIRCLE
+        location {
+            x: 16.3
+            y: -5.3
+            z: 0
+        }
+    }
+    stop_line {
+        segment {
+            line_segment {
+                point {
+                    x: -14
+                    y: 7.32
+                }
+                point {
+                    x: -14
+                    y: -6.88
+                }
+            }
+        }
+    }
+    type: MIX_3_VERTICAL
+}
+Signal {
+    id {
+        id: "4"
+    }
+    boundary {
+        point {
+            x: -8.3
+            y: -16.3
+            z: 0
+        }
+        point {
+            x: -8.3
+            y: -11.3
+            z: 0
+        }
+        point {
+            x: -8.3
+            y: -11.3
+            z: 0
+        }
+        point {
+            x: -8.3
+            y: -16.3
+            z: 0
+        }
+    }
+    subsignal {
+        id {
+            id: "0"
+        }
+        type: CIRCLE
+        location {
+            x: -8.3
+            y: -15.3
+            z: 0
+        }
+    }
+    subsignal {
+        id {
+            id: "1"
+        }
+        type: CIRCLE
+        location {
+            x: -8.3
+            y: -14.3
+            z: 0
+        }
+    }
+    subsignal {
+        id {
+            id: "2"
+        }
+        type: CIRCLE
+        location {
+            x: -8.3
+            y: -13.3
+            z: 0
+        }
+    }
+    stop_line {
+        segment {
+            line_segment {
+                point {
+                    x: 7
+                    y: 14.1
+                }
+                point {
+                    x: -7.6
+                    y: 14.1
+                }
+            }
+        }
+    }
+    type: MIX_3_VERTICAL
+}
