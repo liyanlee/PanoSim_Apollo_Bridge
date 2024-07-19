@@ -1,6 +1,6 @@
 <Experiment readonly="false" description="" groupId="0" mode="normal">
   <World link="PanoTown" traffic="true" hostId="0" nodeId="0" />
-  <Vehicle link="C_Class_Sedan_ZJU" hostId="0" nodeId="0" type="PanoSim-Raw" />
+  <Vehicle link="C_Class_Sedan_apollo" hostId="0" nodeId="0" type="PanoSim-Raw" />
   <Task>
     <Trajectory Z="0">
       <KeyPoints>
