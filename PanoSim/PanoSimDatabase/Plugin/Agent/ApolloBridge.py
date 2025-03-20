@@ -16,8 +16,8 @@ def ModelStart(userData):
     bus_ego_extra_format = 'time@i,VX@d,VY@d,VZ@d,AVx@d,AVy@d,AVz@d,Ax@d,Ay@d,Az@d,AAx@d,AAy@d,AAz@d'
     userData['bus_ego_extra'] = BusAccessor(userData['busId'], 'ego_extra', bus_ego_extra_format)
 
-    bus_ego_all_format = 'time@i,295@[,data@d'
-    userData['bus_ego_all'] = BusAccessor(userData['busId'], 'ego_all', bus_ego_all_format)
+    bus_ego_animator_format = 'time@i,rot_spd_engine@d,trans_gear_position@d,engine_throttle_position@d,master_cyl_press@d,str_whl_ang@d,4@[,center_x@d,center_y@d,center_z@d,yaw@d,pitch@d,roll@d,rotation_spd@d,force_tire_x@d,force_tire_y@d,force_tire_z@d,gnd_x@d,gnd_y@d,gnd_z@d'
+    userData['bus_ego_animator'] = BusAccessor(userData['busId'], 'ego_animator', bus_ego_animator_format)
 
     bus_traffic_light_format = 'time@i,64@[,id@i,direction@b,state@b,timer@i'
     userData['bus_traffic_light'] = BusAccessor(userData['busId'], 'traffic_light', bus_traffic_light_format)
@@ -45,7 +45,7 @@ def ModelStart(userData):
 
 
 def ModelOutput(userData):
-    current_time, ego_x, ego_y, ego_z, ego_yaw, ego_pitch, ego_roll, _ = userData['bus_ego'].readHeader()
+    current_time, ego_x, ego_y, ego_z, ego_yaw, ego_pitch, ego_roll, ego_speed = userData['bus_ego'].readHeader()
     recv_trajectory(userData, ego_x, ego_y, ego_yaw)
 
     if userData['time'] > 1000 and not userData['send_route_complete']:
@@ -78,15 +78,15 @@ def ModelOutput(userData):
             real_size = 3708
             userData['sock_obstacles'].sendto(bus_reader.getBus()[0:real_size], ((apollo_ip, int(remote_port))))
 
-        speed_mps = userData['bus_ego_all'].readBody(47)[0]
-        throttle_percentage = userData['bus_ego_all'].readBody(102)[0] * 100
-        brake_percentage = userData['bus_ego_all'].readBody(19)[0] / 15000000 * 100
-        steering_percentage = userData['bus_ego_all'].readBody(121)[0] / (4 * np.pi) * 100
-        driving_mode = userData['bus_ego_all'].readBody(93)[0]
-        if driving_mode > 1:
-            driving_mode = 1
+        values = userData['bus_ego_animator'].readHeader()
+        trans_gear_position = values[2]
+        if trans_gear_position > 1:
+            trans_gear_position = 1
+        engine_throttle_position = values[3] * 100
+        master_cyl_press = values[4] / 15000000 * 100
+        str_whl_ang = values[5] / (4 * np.pi) * 100
         format_chassis = '<ddddd'
-        chassis_data = struct.pack(format_chassis, speed_mps, throttle_percentage, brake_percentage, steering_percentage, driving_mode)
+        chassis_data = struct.pack(format_chassis, ego_speed, engine_throttle_position, master_cyl_press, str_whl_ang, trans_gear_position)
         remote_port = userData['parameters']['ChassisPort']
         userData['sock_chassis'].sendto(chassis_data, ((apollo_ip, int(remote_port))))
 

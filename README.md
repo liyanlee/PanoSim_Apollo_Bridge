@@ -40,7 +40,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About
-This project aims to provide a data and control bridge for the communication between [__PanoSim__](http://www.panosim.com/) and [__Apollo__](https://www.apollo.auto/). It was tested with PanoSim **v32** and the [Apollo v7.0.0](https://github.com/ApolloAuto/apollo/tree/v7.0.0)
+This project aims to provide a data and control bridge for the communication between [__PanoSim__](http://www.panosim.com/) and [__Apollo__](https://www.apollo.auto/). It was tested with PanoSim **v33** and the [Apollo v7.0.0](https://github.com/ApolloAuto/apollo/tree/v7.0.0)
 
 ## Quick Start
 
